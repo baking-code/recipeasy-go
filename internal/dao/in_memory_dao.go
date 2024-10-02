@@ -14,7 +14,7 @@ type InMemoryDao struct {
 // CreateRecipe implements RecipeDao.
 func (d *InMemoryDao) CreateRecipe(ctx context.Context, recipe recipe.Recipe) (recipe.Recipe, error) {
 	found, ok := d.ById[recipe.Id]
-	if !ok {
+	if ok {
 		return found, errors.New("already exists")
 	} else {
 		d.ById[recipe.Id] = recipe

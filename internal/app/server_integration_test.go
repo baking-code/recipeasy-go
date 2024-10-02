@@ -67,5 +67,4 @@ func TestServer(t *testing.T) {
 	goodRequest = makeRequestWithResponse("/17")
 	assert.Equal(t, "0", string(goodRequest))
 	cleanup()
-
 }
